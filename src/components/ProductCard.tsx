@@ -1,0 +1,20 @@
+import Link from "next/link";
+import { Cap } from "./Cap";
+import type { Product } from "@/lib/products";
+import { euro, site } from "@/lib/site";
+
+export function ProductCard({ p }: { p: Product }) {
+  return (
+    <Link href={`/casquettes/${p.slug}`} className="card">
+      <div className="card-visual">
+        <span className="tag">{p.remaining > 0 ? `${p.remaining} / ${site.seriesSize} restantes` : "Épuisée"}</span>
+        <Cap colors={p.colors} code={p.code} id={p.slug} title={`Casquette ${p.name}`} />
+      </div>
+      <div className="card-body">
+        <h3>{p.name}</h3>
+        <span>{euro(p.priceCents)}</span>
+      </div>
+      <p className="muted">{p.colorway}</p>
+    </Link>
+  );
+}
