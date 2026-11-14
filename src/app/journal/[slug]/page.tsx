@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { ProductCard } from "@/components/ProductCard";
 import { articles, getArticle } from "@/lib/journal";
 import { getProduct } from "@/lib/products";
@@ -22,9 +22,7 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <article className="article">
       <div className="article-body">
-        <Link href="/journal" className="back">
-          ← Journal
-        </Link>
+        <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Journal", href: "/journal" }, { label: a.title }]} />
         <h1>{a.title}</h1>
         <p className="hook">{a.intro}</p>
         {a.sections.map((s) => (

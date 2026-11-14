@@ -6,6 +6,8 @@ export const site = {
   /** Mode aperçu avant lancement : avis d'exemple affichés, site non indexé. Passer NEXT_PUBLIC_PREVIEW à "false" à l'ouverture. */
   preview: process.env.NEXT_PUBLIC_PREVIEW !== "false",
   shippingCents: 490,
+  /** Plage de tour de tête couverte par le réglage snapback. À confirmer avec le fabricant retenu. */
+  sizeRange: "55 à 60 cm",
   instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",

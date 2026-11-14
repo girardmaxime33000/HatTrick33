@@ -20,7 +20,7 @@ npm run dev
 | Prix, exemplaires restants | `src/lib/products.ts` |
 | Avis clients (exemples) | `src/lib/reviews.ts` |
 | Mode aperçu (avis d'exemple, site non indexé) | `NEXT_PUBLIC_PREVIEW=false` pour le désactiver au lancement |
-| Nom, taille des séries, frais de port | `src/lib/site.ts` |
+| Nom, taille des séries, frais de port, plage de tour de tête | `src/lib/site.ts` |
 | Clubs partenaires | `src/app/clubs/page.tsx` (tableau `clubs`) |
 | Paiement | `STRIPE_SECRET_KEY` dans `.env.local` |
 | E-mail des demandes clubs | `NEXT_PUBLIC_CONTACT_EMAIL` |

@@ -3,6 +3,8 @@ export type Article = {
   slug: string;
   title: string;
   intro: string;
+  /** Visuel de l'article lorsqu'il n'est pas rattaché à un modèle. */
+  image?: string;
   sections: { heading: string; body: string }[];
 };
 
@@ -404,6 +406,31 @@ export const articles: Article[] = [
       {
         heading: "Quand la jouer",
         body: "Dès qu'une balle arrive avec assez de longueur pour toucher la vitre, la laisser passer donne du temps et de l'espace. La salida se joue le plus souvent en lob, ou basse dans les pieds des adversaires au filet.",
+      },
+    ],
+  },
+  {
+    slug: "entretien-casquette",
+    title: "Entretenir et nettoyer sa casquette trucker",
+    intro:
+      "Une casquette portée sur la piste est exposée à la transpiration, à la poussière et au soleil. Quelques gestes simples préservent sa forme et ses couleurs.",
+    image: "/caps/la-bandeja-detail.webp",
+    sections: [
+      {
+        heading: "Le nettoyage",
+        body: "Le lavage se fait à la main, à l'eau froide ou tiède, avec un savon doux. Une brosse souple ou un linge permet d'insister sur le bandeau intérieur, où se concentre la transpiration. Le lave-linge et le sèche-linge sont à proscrire : ils déforment la façade en mousse et la visière.",
+      },
+      {
+        heading: "Le séchage",
+        body: "La casquette sèche à l'air libre, posée sur une forme arrondie, un bol retourné par exemple, afin de conserver le volume de la calotte. Elle doit rester à l'écart d'une source de chaleur directe et d'une exposition prolongée au soleil, qui ternit les teintes.",
+      },
+      {
+        heading: "Le rangement",
+        body: "Entre deux matchs, la casquette se range à plat ou suspendue, sans rien poser dessus. Dans un sac de padel, il est préférable de la placer en dernier, au-dessus des affaires, pour éviter d'écraser la façade.",
+      },
+      {
+        heading: "Après le match",
+        body: "Laisser la casquette sécher à l'air avant de la ranger limite les auréoles et les odeurs. Un passage de linge humide sur le bandeau intérieur après chaque utilisation espace les lavages complets.",
       },
     ],
   },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CapPhoto } from "@/components/CapPhoto";
 import { getProduct } from "@/lib/products";
@@ -25,7 +26,11 @@ export default function Journal() {
           {articles.map((a) => (
             <Link key={a.slug} href={`/journal/${a.slug}`} className="journal-card">
               <div className="journal-visual">
-                <CapPhoto slug={a.slug} name={getProduct(a.slug)?.name ?? ""} sizes="(max-width: 600px) 100vw, 360px" />
+                {a.image ? (
+                  <Image src={a.image} alt="" width={900} height={900} sizes="(max-width: 600px) 100vw, 360px" />
+                ) : (
+                  <CapPhoto slug={a.slug} name={getProduct(a.slug)?.name ?? ""} sizes="(max-width: 600px) 100vw, 360px" />
+                )}
               </div>
               <h2>{a.title}</h2>
               <p className="muted">{a.intro}</p>

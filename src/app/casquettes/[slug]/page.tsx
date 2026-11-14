@@ -3,9 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
 import { Assurances } from "@/components/Assurances";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { BuyBar } from "@/components/BuyBar";
 import { Gallery } from "@/components/Gallery";
 import { ProductCard } from "@/components/ProductCard";
+import { ShareButton } from "@/components/ShareButton";
 import { Reviews } from "@/components/Reviews";
 import { Stars } from "@/components/Stars";
 import { StripeBadge } from "@/components/StripeBadge";
@@ -37,9 +39,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="product">
         <Gallery slug={p.slug} name={p.name} />
         <div className="product-info">
-          <Link href="/collection" className="back">
-            ← {site.collection}
-          </Link>
+          <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: site.collection, href: "/collection" }, { label: p.name }]} />
           <p className="eyebrow">
             Série de {site.seriesSize} exemplaires · {stockLabel(p, site.seriesSize)}
           </p>
@@ -51,7 +51,10 @@ export default async function ProductPage({ params }: Props) {
           )}
           <p className="hook">{p.hook}</p>
           <p className="price">{euro(p.priceCents)}</p>
-          <AddToCart slug={p.slug} soldOut={soldOut} />
+          <div className="buy-row">
+            <AddToCart slug={p.slug} soldOut={soldOut} />
+            <ShareButton title={`${p.name} — ${site.name}`} />
+          </div>
           <p className="muted small">
             Un exemplaire par commande. Le numéro, de 01 à {site.seriesSize}, est attribué dans l'ordre des commandes.
           </p>
@@ -75,6 +78,18 @@ export default async function ProductPage({ params }: Props) {
               <dd>Snapback, taille unique</dd>
             </div>
             <div>
+              <dt>Tour de tête</dt>
+              <dd>
+                {site.sizeRange} environ. <Link href="/guide-des-tailles">Guide des tailles</Link>
+              </dd>
+            </div>
+            <div>
+              <dt>Entretien</dt>
+              <dd>
+                Lavage à la main, à l'eau froide. <Link href="/journal/entretien-casquette">Conseils d'entretien</Link>
+              </dd>
+            </div>
+            <div>
               <dt>Édition</dt>
               <dd>
                 {site.seriesSize} exemplaires numérotés, sans réédition
@@ -85,6 +100,12 @@ export default async function ProductPage({ params }: Props) {
               <dd>{euro(site.shippingCents)} en France métropolitaine</dd>
             </div>
           </dl>
+          {site.contactEmail && (
+            <p className="question">
+              <b>Une question sur ce modèle ?</b> Écrivez-nous à{" "}
+              <a href={`mailto:${site.contactEmail}?subject=${encodeURIComponent(p.name)}`}>{site.contactEmail}</a>.
+            </p>
+          )}
         </div>
       </section>
       <Reviews reviews={reviewsFor(p.slug)} />

@@ -1,12 +1,13 @@
 import data from "@/data/products.json";
 
-export type Family = "clair" | "sombre" | "vif";
+export type Color = "creme" | "blanc" | "noir" | "gris" | "bleu" | "vert" | "jaune" | "orange" | "rouge" | "rose" | "violet";
 
 export type Product = {
   slug: string;
   name: string;
   code: string;
-  family: Family;
+  /** Couleur dominante de la façade, utilisée par le filtre de la collection. */
+  color: Color;
   colorway: string;
   hook: string;
   /** Description courte du coup qui donne son nom au modèle. */
@@ -26,7 +27,7 @@ export const products: Product[] = data.map((p) => ({
   slug: p.slug,
   name: p.name,
   code: p.code,
-  family: p.family as Family,
+  color: p.color as Color,
   colorway: p.colorway,
   hook: p.hook,
   shot: p.shot,
@@ -35,10 +36,18 @@ export const products: Product[] = data.map((p) => ({
   remaining: stock[p.slug] ?? SERIES,
 }));
 
-export const families: { id: Family; label: string }[] = [
-  { id: "clair", label: "Tons clairs" },
-  { id: "sombre", label: "Tons sombres" },
-  { id: "vif", label: "Couleurs vives" },
+export const colors: { id: Color; label: string; hex: string }[] = [
+  { id: "creme", label: "Crème", hex: "#EFE6D2" },
+  { id: "blanc", label: "Blanc", hex: "#FFFFFF" },
+  { id: "noir", label: "Noir", hex: "#161616" },
+  { id: "gris", label: "Gris", hex: "#6F747B" },
+  { id: "bleu", label: "Bleu", hex: "#1E4BD2" },
+  { id: "vert", label: "Vert", hex: "#1F7A5C" },
+  { id: "jaune", label: "Jaune", hex: "#E0A526" },
+  { id: "orange", label: "Orange", hex: "#C8623A" },
+  { id: "rouge", label: "Rouge", hex: "#D12B2B" },
+  { id: "rose", label: "Rose", hex: "#E9BFC0" },
+  { id: "violet", label: "Violet", hex: "#6B3FA0" },
 ];
 
 /** Libellé de disponibilité, avec mise en avant des derniers exemplaires. */

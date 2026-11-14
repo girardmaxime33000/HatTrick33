@@ -9,7 +9,7 @@ export function Assurances() {
     [
       "Retour sous 14 jours",
       <>
-        Modalités dans les <Link href="/cgv">conditions de vente</Link>
+        Voir les <Link href="/retours">modalités de retour</Link>
       </>,
     ],
     ["Paiement sécurisé", "Carte bancaire, via Stripe"],
