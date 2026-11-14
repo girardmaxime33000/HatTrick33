@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "./CartProvider";
 import { site } from "@/lib/site";
@@ -8,8 +9,8 @@ export function Header() {
   const { slugs } = useCart();
   return (
     <header className="header">
-      <Link href="/" className="wordmark">
-        HAT-TRICK<span>33</span>
+      <Link href="/" className="logo" aria-label={`${site.name} — accueil`}>
+        <Image src="/logo.png" alt={site.name} width={1200} height={929} priority sizes="120px" />
       </Link>
       <nav>
         <Link href="/#drop">{site.drop}</Link>

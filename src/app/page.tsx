@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Cap } from "@/components/Cap";
 import { ProductCard } from "@/components/ProductCard";
@@ -37,7 +38,10 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-visual">
-          <Cap colors={hero.colors} code={hero.code} id="hero" title={`Casquette ${hero.name}`} />
+          <div className="hero-cap">
+            <Cap colors={hero.colors} code={hero.code} id="hero" title={`Casquette ${hero.name}`} />
+            <Image className="sticker" src="/logo.png" alt="" width={1200} height={929} sizes="190px" />
+          </div>
           <p className="hero-caption">
             {hero.name} — n° 01/{site.seriesSize}
           </p>

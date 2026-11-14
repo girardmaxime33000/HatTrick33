@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
@@ -5,9 +6,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div>
-        <p className="wordmark">
-          HAT-TRICK<span>33</span>
-        </p>
+        <Image className="footer-logo" src="/logo.png" alt={site.name} width={1200} height={929} sizes="200px" />
         <p className="muted">{site.baseline}</p>
       </div>
       <nav>
