@@ -29,7 +29,7 @@ Joueurs et joueuses de club, 25-45 ans, réguliers (1 à 3 matchs par semaine), 
 
 ## Codes de marque
 
-- **Noms** : chaque modèle porte le nom d'un coup (Bandeja, Víbora, Por Tres, Punto de Oro, Chiquita). Ce vocabulaire, connu de tout joueur de club, sert de repère entre pratiquants.
+- **Noms** : chacun des vingt modèles porte le nom d'un coup (Bandeja, Víbora, Por Tres, Punto de Oro, Chiquita, Globo, Remate…). Ce vocabulaire, connu de tout joueur de club, sert de repère entre pratiquants.
 - **Ton** : éditorial, vouvoiement, français professionnel. Phrases complètes et descriptives, vocabulaire de la mode et du sport. Sans effets de style (antithèses, formules chocs) ni discours technique.
 - **Visuel** : vert club-house, crème, jaune balle. Typographie serif italique, dans un esprit club.
 - **Prix** : 42 €. Au-dessus d'une casquette de sport standard, cohérent avec une série numérotée.

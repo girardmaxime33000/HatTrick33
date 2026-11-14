@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Cap } from "@/components/Cap";
+import { CapPhoto } from "@/components/CapPhoto";
 import { StripeBadge } from "@/components/StripeBadge";
 import { useCart } from "@/components/CartProvider";
 import { getProduct, type Product } from "@/lib/products";
@@ -42,7 +42,7 @@ export default function Panier() {
           <p className="muted">
             Les modèles de la {site.collection} sont disponibles dans la limite de {site.seriesSize} exemplaires chacun.
           </p>
-          <Link href="/#collection" className="btn">
+          <Link href="/collection" className="btn">
             Découvrir la collection
           </Link>
         </div>
@@ -52,7 +52,7 @@ export default function Panier() {
             {items.map((p) => (
               <li key={p.slug}>
                 <div className="cart-thumb">
-                  <Cap colors={p.colors} code={p.code} id={`cart-${p.slug}`} />
+                  <CapPhoto slug={p.slug} name={p.name} sizes="110px" />
                 </div>
                 <div>
                   <h3>

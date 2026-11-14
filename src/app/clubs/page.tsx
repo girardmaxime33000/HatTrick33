@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Cap } from "@/components/Cap";
+import { CapPhoto } from "@/components/CapPhoto";
 import { ClubForm } from "@/components/ClubForm";
-import { clubEdition } from "@/lib/products";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -63,7 +62,7 @@ export default function Clubs() {
             </li>
           </ul>
           <div className="club-cap">
-            <Cap colors={clubEdition} code="CLUB" id="club-page" title="Édition club" />
+            <CapPhoto slug="edition-club" name="Édition club" sizes="260px" />
           </div>
         </div>
         <ClubForm />

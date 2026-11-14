@@ -16,7 +16,10 @@ npm run dev
 
 | Quoi | Où |
 |---|---|
-| Modèles, prix, coloris, exemplaires restants | `src/lib/products.ts` |
+| Modèles, textes, coloris | `src/data/products.json` |
+| Prix, exemplaires restants | `src/lib/products.ts` |
+| Avis clients (exemples) | `src/lib/reviews.ts` |
+| Mode aperçu (avis d'exemple, site non indexé) | `NEXT_PUBLIC_PREVIEW=false` pour le désactiver au lancement |
 | Nom, taille des séries, frais de port | `src/lib/site.ts` |
 | Clubs partenaires | `src/app/clubs/page.tsx` (tableau `clubs`) |
 | Paiement | `STRIPE_SECRET_KEY` dans `.env.local` |
@@ -27,4 +30,23 @@ npm run dev
 
 Le stock (`remaining`) est statique : le décrémenter à la main après chaque vente tant qu'il n'y a pas de webhook Stripe ni de base de données.
 
-Les visuels produit sont des illustrations SVG (`src/components/Cap.tsx`), à remplacer par les photos.
+## Visuels produit
+
+Les visuels de `public/caps` sont générés à partir d'une photo de trucker vierge (`assets/base-trucker.jpg`), recolorée selon les coloris de `src/data/products.json`, avec l'écusson du modèle incrusté. Pour les régénérer après une modification des coloris :
+
+```bash
+node scripts/render_patches.js /tmp/patches
+```
+
+```bash
+python scripts/render_caps.py /tmp/patches
+```
+
+Le script Python nécessite `numpy` et `pillow`. Ces visuels sont à remplacer par les photos des casquettes produites.
+
+Crédits photo (licence Unsplash) : Fabio T. (trucker de base), Mediamodifier (photo d'ambiance).
+
+## Avant le lancement
+
+- Remplacer les avis d'exemple de `src/lib/reviews.ts` par des avis réels, puis définir `NEXT_PUBLIC_PREVIEW=false`.
+- Remplacer les visuels de présentation par les photos des casquettes produites.

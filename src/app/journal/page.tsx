@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShotArt } from "@/components/ShotArt";
+import { CapPhoto } from "@/components/CapPhoto";
+import { getProduct } from "@/lib/products";
 import { articles } from "@/lib/journal";
 
 export const metadata: Metadata = {
@@ -23,7 +24,9 @@ export default function Journal() {
         <div className="journal-grid">
           {articles.map((a) => (
             <Link key={a.slug} href={`/journal/${a.slug}`} className="journal-card">
-              <ShotArt slug={a.slug} />
+              <div className="journal-visual">
+                <CapPhoto slug={a.slug} name={getProduct(a.slug)?.name ?? ""} sizes="(max-width: 600px) 100vw, 360px" />
+              </div>
               <h2>{a.title}</h2>
               <p className="muted">{a.intro}</p>
               <span className="more">Lire l'article</span>

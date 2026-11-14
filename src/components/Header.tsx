@@ -13,7 +13,7 @@ export function Header() {
         <Image src="/logo.png" alt={site.name} width={1200} height={929} priority sizes="120px" />
       </Link>
       <nav>
-        <Link href="/#collection">Collection</Link>
+        <Link href="/collection">Collection</Link>
         <Link href="/journal">Journal</Link>
         <Link href="/clubs">Clubs</Link>
         <Link href="/panier" className="cart-link">

@@ -11,7 +11,7 @@ export function Footer() {
         <p className="muted">{site.baseline}</p>
       </div>
       <nav>
-        <Link href="/#collection">{site.collection}</Link>
+        <Link href="/collection">{site.collection}</Link>
         <Link href="/journal">Journal</Link>
         <Link href="/clubs">Clubs partenaires</Link>
         <Link href="/clubs#devenir-partenaire">Devenir club partenaire</Link>

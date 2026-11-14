@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/ProductCard";
-import { ShotArt } from "@/components/ShotArt";
 import { articles, getArticle } from "@/lib/journal";
 import { getProduct } from "@/lib/products";
 
@@ -28,7 +27,6 @@ export default async function ArticlePage({ params }: Props) {
         </Link>
         <h1>{a.title}</h1>
         <p className="hook">{a.intro}</p>
-        <ShotArt slug={a.slug} />
         {a.sections.map((s) => (
           <section key={s.heading}>
             <h2>{s.heading}</h2>

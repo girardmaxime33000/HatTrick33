@@ -12,6 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} — Casquettes padel en séries de ${site.seriesSize}`, template: `%s — ${site.name}` },
+  robots: site.preview ? { index: false, follow: false } : undefined,
   description:
     "HAT-TRICK33 dessine des casquettes trucker pour les joueurs de padel, produites en séries de dix exemplaires numérotés. Disponibles en ligne et dans les clubs partenaires.",
 };
