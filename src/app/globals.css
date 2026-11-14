@@ -104,7 +104,19 @@ cite { display: block; margin-top: 18px; font: 500 0.85rem var(--sans); color: v
 .club-list .tag { position: static; display: inline-block; margin-top: 10px; }
 
 .product { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 5vw, 72px); padding: clamp(28px, 5vw, 64px) var(--pad); align-items: start; }
-.product-visual { position: sticky; top: 96px; padding: clamp(20px, 5vw, 60px); border-radius: 24px; background: var(--paper); border: 1px solid var(--line); }
+.product-visuals { display: grid; gap: 20px; }
+.product-shot { margin: 0; }
+.product-shot figcaption { margin-top: 10px; font-size: 0.9rem; color: var(--muted); }
+.product-shot b { color: var(--ink); }
+.shot-art { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid var(--line); }
+.shots { padding-top: 0; }
+.shots-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.shot { display: grid; gap: 8px; align-content: start; }
+.shot .shot-art { transition: transform 0.2s; }
+.shot:hover .shot-art { transform: translateY(-4px) rotate(-1deg); }
+.shot h3 { margin-top: 6px; }
+.shot p { font-size: 0.9rem; }
+.product-visual { padding: clamp(20px, 5vw, 60px); border-radius: 24px; background: var(--paper); border: 1px solid var(--line); }
 .product-info { display: grid; gap: 16px; justify-items: start; }
 .product-info h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
 .back { font-size: 0.88rem; color: var(--muted); }
@@ -144,9 +156,10 @@ dd { margin: 0; }
 .legal ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
 .legal-form { padding: 22px 26px; background: var(--paper); color: var(--ink); border: 1px solid var(--line); font: 400 0.94rem / 1.7 var(--sans); }
 
+@media (max-width: 1100px) { .shots-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 820px) {
   .hero, .split, .product, .cart-grid { grid-template-columns: 1fr; }
-  .product-visual { position: static; }
+  .shots-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-cap { max-width: 340px; }
   .logo img { height: 50px; }
   .footer { grid-template-columns: 1fr; }

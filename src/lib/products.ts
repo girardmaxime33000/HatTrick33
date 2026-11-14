@@ -11,6 +11,8 @@ export type Product = {
   name: string;
   code: string;
   hook: string;
+  /** Description courte du coup qui donne son nom au modèle. */
+  shot: string;
   story: string;
   colorway: string;
   priceCents: number;
@@ -25,6 +27,7 @@ export const products: Product[] = [
     name: "La Bandeja",
     code: "BDJ",
     hook: "Le coup de référence du jeu au filet.",
+    shot: "Volée haute jouée à plat, pour conserver la position au filet.",
     story:
       "La bandeja est le coup des joueurs qui tiennent le filet avec régularité. Ce modèle en reprend l'esprit avec une façade crème, un filet et une visière vert profond : une allure sobre, qui s'accorde à toutes les tenues.",
     colorway: "Vert club / crème",
@@ -37,6 +40,7 @@ export const products: Product[] = [
     name: "La Víbora",
     code: "VBR",
     hook: "Un noir intégral relevé d'une visière jaune balle.",
+    shot: "Volée haute coupée, à l'effet latéral marqué.",
     story:
       "La víbora est un coup coupé et rapide, dont le rebond surprend l'adversaire. Le modèle associe un noir intégral à une visière jaune balle, pour une silhouette affirmée et immédiatement identifiable.",
     colorway: "Noir / jaune balle",
@@ -49,6 +53,7 @@ export const products: Product[] = [
     name: "Por Tres",
     code: "PX3",
     hook: "Le bleu des pistes, en hommage au smash le plus spectaculaire du jeu.",
+    shot: "Smash dont le rebond sort de la piste par la grille latérale.",
     story:
       "Le por tres désigne le smash qui sort de la piste par la grille latérale. Ce modèle reprend le bleu des terrains et l'associe à un filet blanc, dans un esprit résolument sportif.",
     colorway: "Bleu piste / blanc",
@@ -61,6 +66,7 @@ export const products: Product[] = [
     name: "Punto de Oro",
     code: "ORO",
     hook: "Crème et or, les couleurs du point décisif.",
+    shot: "Point décisif, joué à 40 partout.",
     story:
       "À 40 partout, le punto de oro décide du jeu en un seul échange. Le modèle en retient l'élégance, avec une façade crème, un filet sable et une visière dorée.",
     colorway: "Crème / or",
@@ -73,6 +79,7 @@ export const products: Product[] = [
     name: "La Chiquita",
     code: "CHQ",
     hook: "Une teinte terre cuite, pensée pour l'après-match.",
+    shot: "Balle courte et lente, jouée dans les pieds de l'adversaire.",
     story:
       "La chiquita est une balle courte et précise, jouée dans les pieds de l'adversaire. Le modèle adopte une teinte terre cuite et un filet crème, des couleurs chaudes qui trouvent naturellement leur place en terrasse.",
     colorway: "Terre cuite / crème",

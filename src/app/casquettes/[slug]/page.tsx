@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
 import { StripeBadge } from "@/components/StripeBadge";
+import { ShotArt } from "@/components/ShotArt";
 import { Cap } from "@/components/Cap";
 import { getProduct, products } from "@/lib/products";
 import { euro, site } from "@/lib/site";
@@ -23,8 +24,16 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <section className="product">
-      <div className="product-visual">
-        <Cap colors={p.colors} code={p.code} id={`pdp-${p.slug}`} title={`Casquette ${p.name}`} />
+      <div className="product-visuals">
+        <div className="product-visual">
+          <Cap colors={p.colors} code={p.code} id={`pdp-${p.slug}`} title={`Casquette ${p.name}`} />
+        </div>
+        <figure className="product-shot">
+          <ShotArt slug={p.slug} />
+          <figcaption>
+            <b>{p.name}.</b> {p.shot}
+          </figcaption>
+        </figure>
       </div>
       <div className="product-info">
         <Link href="/#collection" className="back">

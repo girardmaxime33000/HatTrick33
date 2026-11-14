@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Cap } from "@/components/Cap";
 import { ProductCard } from "@/components/ProductCard";
+import { ShotArt } from "@/components/ShotArt";
 import { clubEdition, products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -96,6 +97,25 @@ export default function Home() {
             </div>
             <p className="muted">Un modèle aux couleurs du club, vendu exclusivement à son comptoir.</p>
           </Link>
+        </div>
+      </section>
+
+      <section className="section shots">
+        <header className="section-head">
+          <p className="eyebrow">Les coups</p>
+          <h2>Chaque casquette a son coup</h2>
+          <p className="muted">
+            Cinq personnages, cinq gestes du padel. Chacun porte le modèle auquel son coup a donné son nom.
+          </p>
+        </header>
+        <div className="shots-grid">
+          {products.map((p) => (
+            <Link key={p.slug} href={`/casquettes/${p.slug}`} className="shot">
+              <ShotArt slug={p.slug} />
+              <h3>{p.name}</h3>
+              <p className="muted">{p.shot}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
