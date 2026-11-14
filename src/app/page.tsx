@@ -35,11 +35,8 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">
-            {site.collection} · {products.length} modèles · {site.seriesSize} exemplaires par modèle
-          </p>
           <h1>
-            De la piste <em>au club-house</em>
+            Ayez plus de style <em>que le mec en face</em>
           </h1>
           <p className="lead">
             HAT-TRICK33 dessine des casquettes trucker pour les joueurs de padel. Chaque modèle est produit en{" "}

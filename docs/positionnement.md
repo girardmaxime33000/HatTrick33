@@ -11,7 +11,7 @@
 **La casquette est conçue comme un signe d'appartenance à la communauté des joueurs de padel.**
 Elle identifie celui qui la porte comme un pratiquant, au club-house, en terrasse et en ville.
 
-- Accroche : *De la piste au club-house*
+- Accroche : *Ayez plus de style que le mec en face*
 - Signature : *Casquettes de padel en séries numérotées.*
 
 ## Cible
