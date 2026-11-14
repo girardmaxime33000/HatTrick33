@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
+import { StripeBadge } from "@/components/StripeBadge";
 import { Cap } from "@/components/Cap";
 import { getProduct, products } from "@/lib/products";
 import { euro, site } from "@/lib/site";
@@ -37,6 +38,7 @@ export default async function ProductPage({ params }: Props) {
         <p className="price">{euro(p.priceCents)}</p>
         <AddToCart slug={p.slug} soldOut={soldOut} />
         <p className="muted small">Une par joueur. Ton numéro (01 à {site.seriesSize}) est attribué à la commande.</p>
+        <StripeBadge />
         <p>{p.story}</p>
         <dl>
           <div>

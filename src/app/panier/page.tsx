@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Cap } from "@/components/Cap";
+import { StripeBadge } from "@/components/StripeBadge";
 import { useCart } from "@/components/CartProvider";
 import { getProduct, type Product } from "@/lib/products";
 import { euro, site } from "@/lib/site";
@@ -85,7 +86,10 @@ export default function Panier() {
                 {error}
               </p>
             )}
-            <p className="muted small">Paiement sécurisé par Stripe.</p>
+            <StripeBadge />
+            <p className="muted small">
+              En payant, tu acceptes les <Link href="/cgv">conditions générales de vente</Link>.
+            </p>
           </aside>
         </div>
       )}
