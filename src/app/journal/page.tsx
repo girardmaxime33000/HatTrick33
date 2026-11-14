@@ -6,7 +6,7 @@ import { articles } from "@/lib/journal";
 
 export const metadata: Metadata = {
   title: "Journal",
-  description: "Les coups du padel expliqués : bandeja, víbora, por tres, punto de oro, chiquita.",
+  description: "Les vingt coups du padel qui donnent leur nom aux modèles de la collection, expliqués : principe, geste et usage en match.",
 };
 
 export default function Journal() {
