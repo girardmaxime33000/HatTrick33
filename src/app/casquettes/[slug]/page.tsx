@@ -27,17 +27,17 @@ export default async function ProductPage({ params }: Props) {
         <Cap colors={p.colors} code={p.code} id={`pdp-${p.slug}`} title={`Casquette ${p.name}`} />
       </div>
       <div className="product-info">
-        <Link href="/#drop" className="back">
-          ← {site.drop}
+        <Link href="/#collection" className="back">
+          ← {site.collection}
         </Link>
         <p className="eyebrow">
-          Série de {site.seriesSize} · {soldOut ? "épuisée" : `${p.remaining} restantes`}
+          Série de {site.seriesSize} exemplaires · {soldOut ? "épuisée" : `${p.remaining} disponibles`}
         </p>
         <h1>{p.name}</h1>
         <p className="hook">{p.hook}</p>
         <p className="price">{euro(p.priceCents)}</p>
         <AddToCart slug={p.slug} soldOut={soldOut} />
-        <p className="muted small">Une par joueur. Ton numéro (01 à {site.seriesSize}) est attribué à la commande.</p>
+        <p className="muted small">Un exemplaire par commande. Le numéro, de 01 à {site.seriesSize}, est attribué dans l'ordre des commandes.</p>
         <StripeBadge />
         <p>{p.story}</p>
         <dl>

@@ -7,7 +7,7 @@ export function ProductCard({ p }: { p: Product }) {
   return (
     <Link href={`/casquettes/${p.slug}`} className="card">
       <div className="card-visual">
-        <span className="tag">{p.remaining > 0 ? `${p.remaining} / ${site.seriesSize} restantes` : "Épuisée"}</span>
+        <span className="tag">{p.remaining > 0 ? `${p.remaining} / ${site.seriesSize} disponibles` : "Épuisée"}</span>
         <Cap colors={p.colors} code={p.code} id={p.slug} title={`Casquette ${p.name}`} />
       </div>
       <div className="card-body">

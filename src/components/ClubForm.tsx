@@ -27,11 +27,11 @@ export function ClubForm() {
         <input required value={f.ville} onChange={set("ville")} />
       </label>
       <label>
-        Ton nom et ton téléphone ou e-mail
+        Nom et coordonnées (téléphone ou e-mail)
         <input required value={f.contact} onChange={set("contact")} />
       </label>
       <label>
-        Nombre de pistes, couleurs du club, ce que tu as en tête
+        Votre projet (nombre de pistes, couleurs du club, attentes)
         <textarea rows={4} value={f.message} onChange={set("message")} />
       </label>
       <button className="btn" disabled={!site.contactEmail}>

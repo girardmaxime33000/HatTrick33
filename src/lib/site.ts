@@ -1,7 +1,7 @@
 export const site = {
   name: "HAT-TRICK33",
-  baseline: "Le signe des joueurs.",
-  drop: "Drop 01",
+  baseline: "Casquettes de padel en séries numérotées.",
+  collection: "Collection 01",
   seriesSize: 10,
   shippingCents: 490,
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",

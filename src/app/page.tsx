@@ -6,10 +6,26 @@ import { clubEdition, products } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const rules = [
-  ["01", "Dix exemplaires. Pas onze.", "Chaque modèle sort en série de 10. Quand c'est parti, c'est parti : aucun réassort, aucune réédition."],
-  ["02", "Numérotée à l'intérieur.", "De 01/10 à 10/10. Ton numéro est attribué à la commande, dans l'ordre d'arrivée."],
-  ["03", "Une par joueur.", "Un seul exemplaire de chaque modèle par commande. Dix casquettes, dix têtes différentes."],
-  ["04", "Certaines ne sortent pas du club.", "Les éditions club se trouvent uniquement au comptoir du club dont elles portent les couleurs."],
+  [
+    "01",
+    "Dix exemplaires par modèle",
+    "Chaque modèle est produit en dix exemplaires. Une fois la série vendue, il rejoint les archives de la maison et n'est pas réédité.",
+  ],
+  [
+    "02",
+    "Une numérotation individuelle",
+    "Chaque casquette porte son numéro, de 01/10 à 10/10, attribué dans l'ordre des commandes.",
+  ],
+  [
+    "03",
+    "Un exemplaire par commande",
+    "Chaque commande est limitée à un exemplaire par modèle, afin que la série soit portée par dix joueurs différents.",
+  ],
+  [
+    "04",
+    "Des éditions réservées aux clubs",
+    "Certains modèles sont dessinés aux couleurs d'un club partenaire et vendus exclusivement à son comptoir.",
+  ],
 ];
 
 export default function Home() {
@@ -19,21 +35,21 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">
-            {site.drop} · {products.length} modèles · {site.seriesSize} exemplaires chacun
+            {site.collection} · {products.length} modèles · {site.seriesSize} exemplaires par modèle
           </p>
           <h1>
-            Tout le monde a une raquette. <em>Peu ont la casquette.</em>
+            De la piste <em>au club-house</em>
           </h1>
           <p className="lead">
-            Des trucker pensées pour celles et ceux qui vivent padel, sur la piste comme au club-house. Séries de{" "}
-            {site.seriesSize}, numérotées, jamais rééditées.
+            HAT-TRICK33 dessine des casquettes trucker pour les joueurs de padel. Chaque modèle est produit en{" "}
+            {site.seriesSize} exemplaires numérotés et n'est jamais réédité.
           </p>
           <div className="actions">
-            <Link href="#drop" className="btn btn-ball">
-              Voir le drop
+            <Link href="#collection" className="btn btn-ball">
+              Découvrir la collection
             </Link>
             <Link href="/clubs" className="btn btn-line">
-              Trouver un club
+              Clubs partenaires
             </Link>
           </div>
         </div>
@@ -43,7 +59,7 @@ export default function Home() {
             <Image className="sticker" src="/logo.png" alt="" width={1200} height={929} sizes="190px" />
           </div>
           <p className="hero-caption">
-            {hero.name} — n° 01/{site.seriesSize}
+            {hero.name}, exemplaire n° 01/{site.seriesSize}
           </p>
         </div>
       </section>
@@ -56,13 +72,13 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="section" id="drop">
+      <section className="section" id="collection">
         <header className="section-head">
-          <p className="eyebrow">{site.drop}</p>
-          <h2>Cinq coups. Cinq casquettes.</h2>
+          <p className="eyebrow">{site.collection}</p>
+          <h2>Cinq modèles inspirés des coups du padel</h2>
           <p className="muted">
-            Chaque modèle porte le nom d'un coup. Ceux qui jouent reconnaissent. Les autres demandent, et c'est là que la
-            conversation commence.
+            Chaque casquette porte le nom d'un coup que tout joueur de club connaît. Ce vocabulaire commun fait de la
+            collection un repère entre pratiquants, sur la piste comme en dehors.
           </p>
         </header>
         <div className="grid">
@@ -71,22 +87,22 @@ export default function Home() {
           ))}
           <Link href="/clubs" className="card card-club">
             <div className="card-visual">
-              <span className="tag tag-light">Uniquement en club</span>
+              <span className="tag tag-light">En club uniquement</span>
               <Cap colors={clubEdition} code="CLUB" id="club" title="Édition club" />
             </div>
             <div className="card-body">
               <h3>Édition Club</h3>
-              <span>Au comptoir</span>
+              <span>En club</span>
             </div>
-            <p className="muted">Aux couleurs de ton club. Introuvable en ligne.</p>
+            <p className="muted">Un modèle aux couleurs du club, vendu exclusivement à son comptoir.</p>
           </Link>
         </div>
       </section>
 
       <section className="section rules">
         <header className="section-head">
-          <p className="eyebrow">Les règles de la maison</p>
-          <h2>Ce n'est pas un équipement. C'est un signe.</h2>
+          <p className="eyebrow">Les principes de la maison</p>
+          <h2>Une pièce conçue comme un signe d'appartenance</h2>
         </header>
         <ol>
           {rules.map(([n, t, d]) => (
@@ -102,22 +118,23 @@ export default function Home() {
       <section className="section split">
         <div>
           <p className="eyebrow">En ligne et en club</p>
-          <h2>Le match dure une heure trente. Le club-house, toute la soirée.</h2>
+          <h2>Une collection présente là où le padel se vit</h2>
           <p className="muted">
-            Le padel se joue à quatre et se raconte à dix. Nos casquettes sont en ligne, et au comptoir des clubs
-            partenaires, là où on se retrouve après le dernier point.
+            Le padel se pratique à quatre et se prolonge au club-house. La collection est disponible en ligne et au
+            comptoir des clubs partenaires, au plus près des joueurs.
           </p>
           <div className="actions">
             <Link href="/clubs" className="btn">
-              Où les trouver
+              Voir les clubs partenaires
             </Link>
             <Link href="/clubs#devenir-partenaire" className="btn btn-ghost">
-              Tu gères un club ?
+              Devenir club partenaire
             </Link>
           </div>
         </div>
         <blockquote>
-          « Belle casquette. Tu joues où ? »<cite>— la seule question qu'on cherche à provoquer</cite>
+          « Sur une piste, la casquette est la première chose que l'on remarque chez un joueur. »
+          <cite>HAT-TRICK33, note d'intention</cite>
         </blockquote>
       </section>
     </>

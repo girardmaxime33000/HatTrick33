@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Clubs partenaires",
-  description: "Où trouver les casquettes HAT-TRICK33 en club de padel, et comment devenir club partenaire.",
+  description: "Les clubs de padel partenaires de HAT-TRICK33 et les modalités pour proposer la collection dans votre club.",
 };
 
 /** Ajouter ici les clubs partenaires signés : { name, city, edition? } */
@@ -17,20 +17,20 @@ export default function Clubs() {
     <>
       <section className="section page-head">
         <p className="eyebrow">Clubs partenaires</p>
-        <h1>Au comptoir, entre les tubes de balles et la tireuse.</h1>
+        <h1>La collection, au comptoir des clubs partenaires</h1>
         <p className="lead-dark">
-          Une sélection du {site.drop} est disponible dans les clubs partenaires. Certains ont aussi leur propre édition,
-          aux couleurs du club, qu'on ne trouve nulle part ailleurs.
+          Une sélection de la {site.collection} est proposée dans les clubs partenaires. Certains disposent en outre d'une
+          édition à leurs couleurs, vendue exclusivement sur place.
         </p>
       </section>
 
       <section className="section">
         {clubs.length === 0 ? (
           <div className="empty">
-            <h2>Les premiers clubs arrivent.</h2>
+            <h2>Les premiers clubs partenaires seront annoncés prochainement</h2>
             <p className="muted">
-              On sélectionne en ce moment les clubs du lancement. Ton club devrait en faire partie ? Montre cette page à
-              l'accueil.
+              La sélection des clubs du lancement est en cours. Les responsables de club peuvent dès à présent déposer
+              une demande au moyen du formulaire ci-dessous.
             </p>
           </div>
         ) : (
@@ -49,17 +49,17 @@ export default function Clubs() {
       <section className="section split dark" id="devenir-partenaire">
         <div>
           <p className="eyebrow">Pour les clubs</p>
-          <h2>Une casquette que seuls tes membres peuvent porter.</h2>
+          <h2>Une édition aux couleurs de votre club</h2>
           <ul className="bullets">
             <li>
-              <b>Édition club.</b> Un modèle aux couleurs de ton club, en série de {site.seriesSize} numérotée, vendu
-              uniquement chez toi.
+              <b>Édition club.</b> Un modèle dessiné aux couleurs du club, produit en {site.seriesSize} exemplaires
+              numérotés et vendu exclusivement à son comptoir.
             </li>
             <li>
-              <b>Sélection du drop.</b> Les modèles de la collection en cours, au comptoir, sans passer par le site.
+              <b>Sélection de la collection.</b> Les modèles de la collection en cours, proposés à vos membres sur place.
             </li>
             <li>
-              <b>Petites séries.</b> Rien ne dort en réserve : quand la série est vendue, on passe à la suivante.
+              <b>Petites séries.</b> Des volumes limités, renouvelés à chaque nouvelle série, sans stock à immobiliser.
             </li>
           </ul>
           <div className="club-cap">

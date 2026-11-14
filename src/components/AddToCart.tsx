@@ -15,13 +15,13 @@ export function AddToCart({ slug, soldOut }: { slug: string; soldOut: boolean })
   if (slugs.includes(slug)) {
     return (
       <Link href="/panier" className="btn btn-ghost">
-        Dans ton panier — finaliser
+        Voir le panier
       </Link>
     );
   }
   return (
     <button className="btn" onClick={() => add(slug)}>
-      Prendre la mienne
+      Ajouter au panier
     </button>
   );
 }

@@ -38,10 +38,12 @@ export default function Panier() {
       <h1>Panier</h1>
       {!ready ? null : items.length === 0 ? (
         <div className="empty">
-          <h2>Rien pour l'instant.</h2>
-          <p className="muted">Les séries sont courtes. Elles n'attendent pas.</p>
-          <Link href="/#drop" className="btn">
-            Voir le {site.drop}
+          <h2>Votre panier est vide</h2>
+          <p className="muted">
+            Les modèles de la {site.collection} sont disponibles dans la limite de {site.seriesSize} exemplaires chacun.
+          </p>
+          <Link href="/#collection" className="btn">
+            Découvrir la collection
           </Link>
         </div>
       ) : (
@@ -79,7 +81,7 @@ export default function Panier() {
               <span>{euro(subtotal + site.shippingCents)}</span>
             </p>
             <button className="btn" onClick={checkout} disabled={loading}>
-              {loading ? "Redirection…" : "Payer"}
+              {loading ? "Redirection en cours…" : "Procéder au paiement"}
             </button>
             {error && (
               <p className="error" role="alert">
@@ -88,7 +90,7 @@ export default function Panier() {
             )}
             <StripeBadge />
             <p className="muted small">
-              En payant, tu acceptes les <Link href="/cgv">conditions générales de vente</Link>.
+              En validant le paiement, vous acceptez les <Link href="/cgv">conditions générales de vente</Link>.
             </p>
           </aside>
         </div>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} — Casquettes padel en séries de ${site.seriesSize}`, template: `%s — ${site.name}` },
   description:
-    "Casquettes trucker pour joueurs de padel. Séries de 10 numérotées, jamais rééditées. En ligne et au comptoir des clubs partenaires.",
+    "HAT-TRICK33 dessine des casquettes trucker pour les joueurs de padel, produites en séries de dix exemplaires numérotés. Disponibles en ligne et dans les clubs partenaires.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

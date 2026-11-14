@@ -8,38 +8,38 @@
 
 ## Positionnement
 
-**La casquette n'est pas un équipement, c'est un signe d'appartenance.**
-Elle dit « je joue », elle se remarque au club-house, en terrasse, en ville. La question visée : « Belle casquette. Tu joues où ? »
+**La casquette est conçue comme un signe d'appartenance à la communauté des joueurs de padel.**
+Elle identifie celui qui la porte comme un pratiquant, au club-house, en terrasse et en ville.
 
-- Accroche : *Tout le monde a une raquette. Peu ont la casquette.*
-- Signature : *Le signe des joueurs.*
+- Accroche : *De la piste au club-house*
+- Signature : *Casquettes de padel en séries numérotées.*
 
 ## Cible
 
-Joueurs et joueuses de club, 25-45 ans, réguliers (1 à 3 matchs par semaine), pour qui le padel est aussi un cercle social. Ils n'achètent pas une protection solaire : ils achètent ce que la casquette dit d'eux.
+Joueurs et joueuses de club, 25-45 ans, réguliers (1 à 3 matchs par semaine), pour qui le padel est aussi un cercle social. Leur achat est motivé par ce que la casquette exprime de leur pratique et de leur appartenance à un club.
 
 ## Les quatre mécaniques de statut
 
 | Mécanique | Règle | Effet |
 |---|---|---|
-| Rareté | Série de 10 par modèle, aucune réédition | Posséder = être arrivé avant les autres |
-| Preuve | Exemplaire numéroté 01/10 à 10/10 | La rareté est vérifiable, donc racontable |
-| Limite | Un exemplaire par modèle et par commande | Dix porteurs différents, pas de revente en lot |
-| Territoire | Éditions club vendues uniquement au comptoir du club | Appartenance locale, introuvable en ligne |
+| Rareté | Série de 10 par modèle, aucune réédition | Valorise les premiers acheteurs |
+| Preuve | Exemplaire numéroté 01/10 à 10/10 | Rend la rareté vérifiable |
+| Limite | Un exemplaire par modèle et par commande | Dix porteurs différents par série |
+| Territoire | Éditions club vendues uniquement au comptoir du club | Appartenance locale, exclusivité du club |
 
 ## Codes de marque
 
-- **Noms** : chaque modèle porte le nom d'un coup (Bandeja, Víbora, Por Tres, Punto de Oro, Chiquita). Langage d'initiés : ceux qui jouent reconnaissent, les autres demandent.
-- **Ton** : sûr de lui, tutoiement, humour de vestiaire. Jamais technique, jamais « performance ».
-- **Visuel** : vert club-house, crème, jaune balle. Typographie serif italique (esprit club), pas l'esthétique fluo des équipementiers.
+- **Noms** : chaque modèle porte le nom d'un coup (Bandeja, Víbora, Por Tres, Punto de Oro, Chiquita). Ce vocabulaire, connu de tout joueur de club, sert de repère entre pratiquants.
+- **Ton** : éditorial, vouvoiement, français professionnel. Phrases complètes et descriptives, vocabulaire de la mode et du sport. Sans effets de style (antithèses, formules chocs) ni discours technique.
+- **Visuel** : vert club-house, crème, jaune balle. Typographie serif italique, dans un esprit club.
 - **Prix** : 42 €. Au-dessus d'une casquette de sport standard, cohérent avec une série numérotée.
 
 ## Distribution
 
 | Canal | Rôle | Offre |
 |---|---|---|
-| Site | Drops, récit de marque, rareté affichée (compteur x/10) | Collection du drop |
-| Clubs partenaires | Visibilité là où le statut se joue, achat d'impulsion après match | Sélection du drop + édition club exclusive |
+| Site | Collections, récit de marque, rareté affichée (compteur x/10) | Collection en cours |
+| Clubs partenaires | Visibilité au club-house, achat après le match | Sélection de la collection et édition club exclusive |
 
 L'édition club est le levier de prospection : le club obtient un objet que seuls ses membres peuvent porter.
 

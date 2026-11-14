@@ -11,8 +11,8 @@ export function Footer() {
         <p className="muted">{site.baseline}</p>
       </div>
       <nav>
-        <Link href="/#drop">{site.drop}</Link>
-        <Link href="/clubs">Trouver un club</Link>
+        <Link href="/#collection">{site.collection}</Link>
+        <Link href="/clubs">Clubs partenaires</Link>
         <Link href="/clubs#devenir-partenaire">Devenir club partenaire</Link>
         <Link href="/panier">Panier</Link>
       </nav>
@@ -21,7 +21,7 @@ export function Footer() {
         <Link href="/mentions-legales">Mentions légales</Link>
         <StripeBadge light />
       </nav>
-      <p className="muted small">Séries de {site.seriesSize}. Numérotées. Jamais rééditées.</p>
+      <p className="muted small">Casquettes produites en séries de {site.seriesSize} exemplaires numérotés, sans réédition.</p>
     </footer>
   );
 }
