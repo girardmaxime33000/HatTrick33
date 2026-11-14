@@ -12,9 +12,15 @@ export function Footer() {
       </div>
       <nav>
         <Link href="/#collection">{site.collection}</Link>
+        <Link href="/journal">Journal</Link>
         <Link href="/clubs">Clubs partenaires</Link>
         <Link href="/clubs#devenir-partenaire">Devenir club partenaire</Link>
-        <Link href="/panier">Panier</Link>
+        {site.instagramUrl && (
+          <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        )}
+        {site.contactEmail && <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>}
       </nav>
       <nav>
         <Link href="/cgv">Conditions générales de vente</Link>

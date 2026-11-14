@@ -3,6 +3,7 @@ import "@fontsource-variable/fraunces/wght.css";
 import "@fontsource-variable/fraunces/wght-italic.css";
 import "@fontsource-variable/instrument-sans/wght.css";
 import "./globals.css";
+import { AnnounceBar } from "@/components/AnnounceBar";
 import { CartProvider } from "@/components/CartProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         <CartProvider>
+          <AnnounceBar />
           <Header />
           <main>{children}</main>
           <Footer />

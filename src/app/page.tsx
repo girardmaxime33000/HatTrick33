@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cap } from "@/components/Cap";
+import { Newsletter } from "@/components/Newsletter";
 import { ProductCard } from "@/components/ProductCard";
 import { ShotArt } from "@/components/ShotArt";
 import { clubEdition, products } from "@/lib/products";
@@ -107,11 +108,16 @@ export default function Home() {
         </header>
         <div className="shots-grid">
           {products.map((p) => (
-            <Link key={p.slug} href={`/casquettes/${p.slug}`} className="shot">
-              <ShotArt slug={p.slug} />
+            <div key={p.slug} className="shot">
+              <Link href={`/casquettes/${p.slug}`} aria-label={`Casquette ${p.name}`}>
+                <ShotArt slug={p.slug} />
+              </Link>
               <h3>{p.name}</h3>
               <p className="muted">{p.shot}</p>
-            </Link>
+              <Link href={`/journal/${p.slug}`} className="more">
+                Comprendre le coup
+              </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -154,6 +160,8 @@ export default function Home() {
           <cite>HAT-TRICK33, note d'intention</cite>
         </blockquote>
       </section>
+
+      <Newsletter />
     </>
   );
 }

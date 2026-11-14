@@ -14,6 +14,7 @@ export function Header() {
       </Link>
       <nav>
         <Link href="/#collection">Collection</Link>
+        <Link href="/journal">Journal</Link>
         <Link href="/clubs">Clubs</Link>
         <Link href="/panier" className="cart-link">
           Panier <b>{slugs.length}</b>

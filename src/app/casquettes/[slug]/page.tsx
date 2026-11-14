@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Assurances } from "@/components/Assurances";
+import { BuyBar } from "@/components/BuyBar";
+import { ProductCard } from "@/components/ProductCard";
 import { AddToCart } from "@/components/AddToCart";
 import { StripeBadge } from "@/components/StripeBadge";
 import { ShotArt } from "@/components/ShotArt";
 import { Cap } from "@/components/Cap";
-import { getProduct, products } from "@/lib/products";
+import { getProduct, products, stockLabel } from "@/lib/products";
 import { euro, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,6 +26,7 @@ export default async function ProductPage({ params }: Props) {
   const soldOut = p.remaining <= 0;
 
   return (
+    <>
     <section className="product">
       <div className="product-visuals">
         <div className="product-visual">
@@ -31,7 +35,8 @@ export default async function ProductPage({ params }: Props) {
         <figure className="product-shot">
           <ShotArt slug={p.slug} />
           <figcaption>
-            <b>{p.name}.</b> {p.shot}
+            <b>{p.name}.</b> {p.shot}{" "}
+            <Link href={`/journal/${p.slug}`}>Lire l'article</Link>
           </figcaption>
         </figure>
       </div>
@@ -40,13 +45,14 @@ export default async function ProductPage({ params }: Props) {
           ← {site.collection}
         </Link>
         <p className="eyebrow">
-          Série de {site.seriesSize} exemplaires · {soldOut ? "épuisée" : `${p.remaining} disponibles`}
+          Série de {site.seriesSize} exemplaires · {stockLabel(p, site.seriesSize)}
         </p>
         <h1>{p.name}</h1>
         <p className="hook">{p.hook}</p>
         <p className="price">{euro(p.priceCents)}</p>
         <AddToCart slug={p.slug} soldOut={soldOut} />
         <p className="muted small">Un exemplaire par commande. Le numéro, de 01 à {site.seriesSize}, est attribué dans l'ordre des commandes.</p>
+        <Assurances />
         <StripeBadge />
         <p>{p.story}</p>
         <dl>
@@ -75,5 +81,20 @@ export default async function ProductPage({ params }: Props) {
         </dl>
       </div>
     </section>
+    <section className="section others">
+      <header className="section-head">
+        <p className="eyebrow">{site.collection}</p>
+        <h2>Les autres modèles de la collection</h2>
+      </header>
+      <div className="grid">
+        {products
+          .filter((o) => o.slug !== p.slug)
+          .map((o) => (
+            <ProductCard key={o.slug} p={o} />
+          ))}
+      </div>
+    </section>
+    <BuyBar p={p} />
+    </>
   );
 }

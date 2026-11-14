@@ -156,10 +156,52 @@ dd { margin: 0; }
 .legal ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
 .legal-form { padding: 22px 26px; background: var(--paper); color: var(--ink); border: 1px solid var(--line); font: 400 0.94rem / 1.7 var(--sans); }
 
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.announce { margin: 0; padding: 7px var(--pad); list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 28px; background: var(--ink); color: rgba(244, 239, 228, 0.85); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em; }
+.tag-last { background: var(--clay); }
+.card-sold .cap { opacity: 0.45; filter: grayscale(1); }
+.more { font-size: 0.88rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.product-shot a { text-decoration: underline; }
+
+.assurances { width: 100%; margin: 0; padding: 16px 18px; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); font-size: 0.86rem; }
+.assurances li { display: flex; gap: 9px; align-items: flex-start; color: var(--muted); }
+.assurances svg { flex: none; width: 18px; height: 18px; margin-top: 2px; color: var(--green); }
+.assurances b { display: block; color: var(--ink); }
+.assurances a { text-decoration: underline; }
+.others { border-top: 1px solid var(--line); }
+.buybar { display: none; }
+
+.newsletter { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 6vw, 80px); align-items: center; background: var(--green); color: var(--cream); }
+.newsletter > div { display: grid; gap: 14px; }
+.newsletter .eyebrow { color: var(--ball); }
+.newsletter p:not(.eyebrow):not(.error) { color: rgba(244, 239, 228, 0.8); }
+.newsletter-form { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.newsletter-form input { min-width: 0; padding: 14px 18px; border: 1.5px solid rgba(244, 239, 228, 0.4); border-radius: 99px; background: transparent; color: var(--cream); font: inherit; }
+.newsletter-form input::placeholder { color: rgba(244, 239, 228, 0.55); }
+.newsletter-form .error { grid-column: 1 / -1; }
+.newsletter-done { font: italic 500 1.2rem var(--display); }
+
+.journal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 36px 24px; }
+.journal-card { display: grid; gap: 10px; align-content: start; }
+.journal-card h2 { font-size: 1.45rem; margin-top: 6px; }
+.journal-card .muted { font-size: 0.95rem; }
+.article { display: grid; grid-template-columns: minmax(0, 44em) 300px; gap: clamp(28px, 6vw, 80px); padding: clamp(32px, 5vw, 64px) var(--pad); align-items: start; }
+.article-body { display: grid; gap: 20px; }
+.article-body h1 { font-size: clamp(2.1rem, 4.6vw, 3.6rem); }
+.article-body h2 { font-size: 1.5rem; margin-bottom: 8px; }
+.article-aside { position: sticky; top: 100px; display: grid; gap: 14px; }
+
 @media (max-width: 1100px) { .shots-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 820px) {
   .hero, .split, .product, .cart-grid { grid-template-columns: 1fr; }
   .shots-grid { grid-template-columns: repeat(2, 1fr); }
+  .newsletter, .article { grid-template-columns: 1fr; }
+  .article-aside { position: static; max-width: 320px; }
+  .announce li:nth-child(n + 3) { display: none; }
+  .buybar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; background: var(--paper); border-top: 1px solid var(--line); }
+  .buybar div { display: grid; line-height: 1.25; font-size: 0.92rem; }
+  .buybar .btn { padding: 12px 20px; }
+  .others { padding-bottom: 110px; }
   .hero-cap { max-width: 340px; }
   .logo img { height: 50px; }
   .footer { grid-template-columns: 1fr; }

@@ -97,4 +97,14 @@ export const clubEdition: CapColors = {
   patchInk: "#12201A",
 };
 
+/** Libellé de disponibilité, avec mise en avant des derniers exemplaires. */
+export const stockLabel = (p: Product, seriesSize: number) =>
+  p.remaining <= 0
+    ? "Série épuisée"
+    : p.remaining === 1
+      ? "Dernier exemplaire"
+      : p.remaining <= 3
+        ? `Derniers exemplaires : ${p.remaining}`
+        : `${p.remaining} / ${seriesSize} disponibles`;
+
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);

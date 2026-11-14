@@ -21,6 +21,9 @@ npm run dev
 | Clubs partenaires | `src/app/clubs/page.tsx` (tableau `clubs`) |
 | Paiement | `STRIPE_SECRET_KEY` dans `.env.local` |
 | E-mail des demandes clubs | `NEXT_PUBLIC_CONTACT_EMAIL` |
+| Articles du journal | `src/lib/journal.ts` |
+| Inscription « prochaine collection » | `NEWSLETTER_WEBHOOK_URL` (section masquée sans cette variable) |
+| Lien Instagram en pied de page | `NEXT_PUBLIC_INSTAGRAM_URL` |
 
 Le stock (`remaining`) est statique : le décrémenter à la main après chaque vente tant qu'il n'y a pas de webhook Stripe ni de base de données.
 

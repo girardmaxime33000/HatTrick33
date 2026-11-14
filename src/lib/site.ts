@@ -4,6 +4,7 @@ export const site = {
   collection: "Collection 01",
   seriesSize: 10,
   shippingCents: 490,
+  instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 };
