@@ -76,7 +76,7 @@ export default function Home() {
         <h2>En club</h2>
         <p className="muted">
           {clubs.length > 0
-            ? `Une partie de la collection est vendue au comptoir des clubs partenaires : ${clubs.map((c) => `${c.name} (${c.city})`).join(", ")}.${hasClubEdition ? " Certains ont une édition à leurs couleurs, vendue uniquement sur place." : ""}`
+            ? `Une partie de la collection est vendue au comptoir des clubs partenaires.${hasClubEdition ? " Certains ont une édition à leurs couleurs, vendue uniquement sur place." : ""}`
             : `Nous dessinons pour les clubs une édition à leurs couleurs, en ${site.seriesSize} exemplaires, vendue uniquement à leur comptoir. Les premiers clubs partenaires sont en cours de sélection.`}
         </p>
         <div className="actions">

@@ -44,7 +44,7 @@ python scripts/render_caps.py /tmp/patches
 
 Le script Python nécessite `numpy` et `pillow`. Ces visuels sont à remplacer par les photos des casquettes produites.
 
-Crédit photo (licence Unsplash) : Fabio T. (trucker de base).
+Crédits photo (licence Unsplash) : Fabio T. (trucker de base), Mediamodifier (photo portée, `public/porte.webp`, commune à tous les modèles).
 
 ## Avant le lancement
 
