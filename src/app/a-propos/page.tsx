@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { products } from "@/lib/products";
@@ -16,15 +15,14 @@ export default function APropos() {
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "À propos" }]} />
       <h1>À propos de {site.name}</h1>
       <p>
-        {site.name} dessine des casquettes trucker pour les joueurs de padel. La marque part d'un constat : le padel est
-        un sport de club, où l'on se retrouve autant sur la piste qu'au club-house, et la casquette y est l'accessoire le
-        plus visible.
+        {site.name} dessine des casquettes trucker pour les joueurs de padel. Le padel se joue à quatre et se termine au
+        club-house. La casquette est ce qu'on y garde sur la tête après le match.
       </p>
 
-      <h2>La démarche</h2>
+      <h2>La collection</h2>
       <p>
-        Chacun des {products.length} modèles de la {site.collection} porte le nom d'un coup du padel et se décline dans un
-        coloris qui lui est propre. Tous sont produits en {site.seriesSize} exemplaires numérotés et ne sont pas
+        Chacun des {products.length} modèles de la {site.collection} porte le nom d'un coup du padel et a
+        son propre coloris. Tous sont produits en {site.seriesSize} exemplaires numérotés et ne sont pas
         réédités. La collection est vendue en ligne et au comptoir de clubs partenaires, dont certains disposent d'une
         édition à leurs couleurs.
       </p>
@@ -36,10 +34,8 @@ export default function APropos() {
         communication de la marque.
       </p>
 
-      <Image src="/logo.png" alt={site.name} width={1200} height={929} sizes="220px" style={{ width: 220, height: "auto" }} />
-
       <p>
-        <Link href="/collection">Découvrir la collection</Link> · <Link href="/clubs">Clubs partenaires</Link> ·{" "}
+        <Link href="/collection">Voir la collection</Link> · <Link href="/clubs">Clubs partenaires</Link> ·{" "}
         <Link href="/journal">Journal</Link>
       </p>
     </article>

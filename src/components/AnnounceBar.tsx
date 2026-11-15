@@ -1,18 +1,9 @@
-import { site } from "@/lib/site";
-
-const items = [
-  `Séries de ${site.seriesSize} exemplaires numérotés`,
-  "Livraison en France métropolitaine",
-  "Retour sous 14 jours",
-  "Paiement sécurisé",
-];
+import { euro, site } from "@/lib/site";
 
 export function AnnounceBar() {
   return (
-    <ul className="announce">
-      {items.map((t) => (
-        <li key={t}>{t}</li>
-      ))}
-    </ul>
+    <p className="announce">
+      Livraison {euro(site.shippingCents)} en France métropolitaine. Retour sous 14 jours.
+    </p>
   );
 }

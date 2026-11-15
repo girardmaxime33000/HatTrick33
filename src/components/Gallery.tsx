@@ -17,7 +17,7 @@ export function Gallery({ slug, name }: { slug: string; name: string }) {
           </button>
         ))}
       </div>
-      <p className="muted small">Visuels de présentation réalisés à partir d'une photographie, avant production de la série.</p>
+      <p className="muted small">Visuel de présentation. Les photos des casquettes produites le remplaceront.</p>
     </div>
   );
 }

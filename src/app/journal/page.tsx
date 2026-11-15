@@ -14,11 +14,9 @@ export default function Journal() {
   return (
     <>
       <section className="section page-head">
-        <p className="eyebrow">Journal</p>
         <h1>Les coups du padel expliqués</h1>
         <p className="lead-dark">
-          Chaque modèle de la collection porte le nom d'un coup. Le journal en présente le principe, le geste et
-          l'usage en match.
+          Chaque modèle porte le nom d'un coup. Un article par coup : le principe, le geste, quand le jouer.
         </p>
       </section>
       <section className="section">

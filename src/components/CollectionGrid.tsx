@@ -20,7 +20,7 @@ export function CollectionGrid() {
       <div className="toolbar">
         <div className="filters" role="group" aria-label="Filtrer par couleur">
           <button aria-pressed={color === "all"} onClick={() => setColor("all")}>
-            Toutes les couleurs
+            Toutes
           </button>
           {available.map((c) => (
             <button key={c.id} aria-pressed={color === c.id} onClick={() => setColor(c.id)}>

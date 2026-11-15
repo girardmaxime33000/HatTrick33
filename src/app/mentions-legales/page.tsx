@@ -8,7 +8,6 @@ export const metadata: Metadata = { title: "Mentions légales" };
 export default function MentionsLegales() {
   return (
     <article className="legal">
-      <p className="eyebrow">Informations légales</p>
       <h1>Mentions légales</h1>
       <p className="muted small">Dernière mise à jour : {legal.updated}</p>
 

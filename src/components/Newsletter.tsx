@@ -6,11 +6,10 @@ export function Newsletter() {
   return (
     <section className="section newsletter">
       <div>
-        <p className="eyebrow">Prochaine collection</p>
-        <h2>Être informé avant l'ouverture des ventes</h2>
+        <h2>Prochaine collection</h2>
         <p>
-          Chaque série compte dix exemplaires. Les inscrits reçoivent la date de sortie de la prochaine collection avant
-          sa mise en ligne. Un e-mail par collection, sans autre sollicitation.
+          Laissez votre adresse : vous recevrez la date de sortie avant la mise en ligne. Un e-mail par collection, rien
+          d'autre.
         </p>
       </div>
       <NewsletterForm />

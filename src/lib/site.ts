@@ -3,7 +3,7 @@ export const site = {
   baseline: "Casquettes de padel en séries numérotées.",
   collection: "Collection 01",
   seriesSize: 10,
-  /** Mode aperçu avant lancement : avis d'exemple affichés, site non indexé. Passer NEXT_PUBLIC_PREVIEW à "false" à l'ouverture. */
+  /** Mode aperçu avant lancement : site non indexé. Passer NEXT_PUBLIC_PREVIEW à "false" à l'ouverture. */
   preview: process.env.NEXT_PUBLIC_PREVIEW !== "false",
   shippingCents: 490,
   /** Plage de tour de tête couverte par le réglage snapback. À confirmer avec le fabricant retenu. */

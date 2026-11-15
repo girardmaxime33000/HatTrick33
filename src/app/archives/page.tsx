@@ -18,17 +18,15 @@ export default function Archives() {
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Archives" }]} />
         <h1>Les séries épuisées</h1>
         <p className="lead-dark">
-          Chaque modèle est produit en {site.seriesSize} exemplaires et n'est pas réédité. Une fois la série vendue, il
-          rejoint cette page, qui conserve la mémoire des collections.
+          Les modèles dont les {site.seriesSize} exemplaires sont vendus. Ils ne seront pas refaits.
         </p>
       </section>
       <section className="section">
         {sold.length === 0 ? (
           <div className="empty">
-            <h2>Aucune série n'est épuisée à ce jour</h2>
-            <p className="muted">Tous les modèles de la {site.collection} sont encore disponibles.</p>
+            <h2>Aucune série épuisée pour l'instant</h2>
             <Link href="/collection" className="btn">
-              Découvrir la collection
+              Voir la collection
             </Link>
           </div>
         ) : (

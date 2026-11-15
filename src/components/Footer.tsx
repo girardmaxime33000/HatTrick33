@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { StripeBadge } from "./StripeBadge";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -17,12 +16,11 @@ export function Footer() {
         <Link href="/guide-des-tailles">Guide des tailles</Link>
         <Link href="/retours">Retours et remboursements</Link>
       </nav>
-      <nav aria-label="La maison">
-        <h2>La maison</h2>
+      <nav aria-label="La marque">
+        <h2>La marque</h2>
         <Link href="/a-propos">À propos</Link>
         <Link href="/journal">Journal</Link>
-        <Link href="/clubs">Clubs partenaires</Link>
-        <Link href="/clubs#devenir-partenaire">Devenir club partenaire</Link>
+        <Link href="/clubs">Clubs</Link>
         {site.instagramUrl && (
           <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer">
             Instagram
@@ -34,7 +32,6 @@ export function Footer() {
         <h2>Informations</h2>
         <Link href="/cgv">Conditions générales de vente</Link>
         <Link href="/mentions-legales">Mentions légales</Link>
-        <StripeBadge light />
         <p className="pay">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="visa" src="/pay/visa.svg" alt="Visa" />
@@ -42,7 +39,6 @@ export function Footer() {
           <img className="mc" src="/pay/mastercard.svg" alt="Mastercard" />
         </p>
       </nav>
-      <p className="muted small">Casquettes produites en séries de {site.seriesSize} exemplaires numérotés, sans réédition.</p>
     </footer>
   );
 }
