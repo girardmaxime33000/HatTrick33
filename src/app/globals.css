@@ -176,7 +176,7 @@ dd { margin: 0; }
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb [aria-current] { color: var(--ink); }
 .question { font-size: 0.92rem; }
-.question a, dd a, .editorial a, .prose a, .product-info p a { text-decoration: underline; }
+.club-list a, .question a, dd a, .editorial a, .prose a, .product-info p a { text-decoration: underline; }
 .toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 32px; }
 .toolbar .filters { margin-bottom: 0; }
 .filters i { display: inline-block; width: 12px; height: 12px; margin-right: 7px; border-radius: 50%; border: 1px solid rgba(18, 32, 26, 0.25); vertical-align: -1px; }

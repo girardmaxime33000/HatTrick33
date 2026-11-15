@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CapPhoto } from "@/components/CapPhoto";
 import { ClubForm } from "@/components/ClubForm";
-import { clubs } from "@/lib/clubs";
+import { clubs, hasClubEdition } from "@/lib/clubs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -16,8 +16,8 @@ export default function Clubs() {
       <section className="section page-head">
         <h1>Clubs partenaires</h1>
         <p className="lead-dark">
-          Une partie de la {site.collection} est vendue au comptoir des clubs partenaires. Certains ont une édition à
-          leurs couleurs, vendue uniquement sur place.
+          Une partie de la {site.collection} est vendue au comptoir des clubs partenaires.
+          {hasClubEdition && " Certains ont une édition à leurs couleurs, vendue uniquement sur place."}
         </p>
       </section>
 
@@ -33,7 +33,15 @@ export default function Clubs() {
           <ul className="club-list">
             {clubs.map((c) => (
               <li key={c.name}>
-                <h3>{c.name}</h3>
+                <h3>
+                  {c.url ? (
+                    <a href={c.url} target="_blank" rel="noopener noreferrer">
+                      {c.name}
+                    </a>
+                  ) : (
+                    c.name
+                  )}
+                </h3>
                 <p className="muted">{c.city}</p>
                 {c.edition && <span className="tag">Édition club : {c.edition}</span>}
               </li>
