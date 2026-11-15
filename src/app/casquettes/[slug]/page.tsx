@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { BuyBar } from "@/components/BuyBar";
 import { Gallery } from "@/components/Gallery";
 import { ProductCard } from "@/components/ProductCard";
+import { SizeGuide } from "@/components/SizeGuide";
 import { Reviews } from "@/components/Reviews";
 import { Stars } from "@/components/Stars";
 import { getArticle } from "@/lib/journal";
@@ -48,6 +49,7 @@ export default async function ProductPage({ params }: Props) {
           <p className="price">
             {euro(p.priceCents)} <span className="stock">{stockLabel(p, site.seriesSize)}</span>
           </p>
+          <p className="size">Taille unique, tour de tête {site.sizeRange}</p>
           <AddToCart slug={p.slug} soldOut={soldOut} />
           <Assurances />
           <p>
@@ -67,12 +69,6 @@ export default async function ProductPage({ params }: Props) {
               <dd>Snapback, taille unique</dd>
             </div>
             <div>
-              <dt>Tour de tête</dt>
-              <dd>
-                {site.sizeRange} environ. <Link href="/guide-des-tailles">Guide des tailles</Link>
-              </dd>
-            </div>
-            <div>
               <dt>Entretien</dt>
               <dd>
                 Lavage à la main, à l'eau froide. <Link href="/journal/entretien-casquette">Conseils d'entretien</Link>
@@ -86,6 +82,26 @@ export default async function ProductPage({ params }: Props) {
               </dd>
             </div>
           </dl>
+          <details className="fold">
+            <summary>Guide des tailles</summary>
+            <div>
+              <SizeGuide heading="h3" />
+            </div>
+          </details>
+          <details className="fold">
+            <summary>Livraison et retours</summary>
+            <div>
+              <p>
+                Livraison en France métropolitaine, {euro(site.shippingCents)} par commande.
+                {site.shippingDelay && ` ${site.shippingDelay}.`}
+              </p>
+              <p>
+                Retour possible dans les 14 jours suivant la réception, casquette non portée. Le remboursement comprend
+                les frais de livraison initiaux ; les frais de retour restent à votre charge.{" "}
+                <Link href="/retours">Détail des retours</Link>
+              </p>
+            </div>
+          </details>
           {site.contactEmail && (
             <p className="question">
               Une question ? Écrivez à{" "}

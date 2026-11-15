@@ -129,6 +129,14 @@ dd { margin: 0; }
 .assurances a { text-decoration: underline; }
 .others { border-top: 1px solid var(--line); }
 .buybar { display: none; }
+.size { font-size: 0.94rem; font-weight: 600; }
+.fold { width: 100%; border-bottom: 1px solid var(--line); font-size: 0.94rem; }
+dl + .fold { margin-top: -16px; }
+.fold + .fold { margin-top: -16px; }
+.fold summary { padding: 12px 0; font-weight: 600; cursor: pointer; }
+.fold > div { display: grid; gap: 10px; padding-bottom: 16px; }
+.fold h3 { font: 600 0.94rem var(--sans); letter-spacing: 0; margin-top: 4px; }
+.fold ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
 
 .newsletter { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 6vw, 80px); align-items: center; background: var(--green); color: var(--cream); }
 .newsletter > div { display: grid; gap: 14px; }
@@ -207,6 +215,7 @@ dd { margin: 0; }
   .buybar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; background: var(--paper); border-top: 1px solid var(--line); }
   .buybar div { display: grid; line-height: 1.25; font-size: 0.92rem; }
   .buybar .btn { padding: 12px 20px; }
+  .product-info > .btn { width: 100%; }
   .others { padding-bottom: 110px; }
   .logo img { height: 50px; }
   .footer { grid-template-columns: 1fr; }
