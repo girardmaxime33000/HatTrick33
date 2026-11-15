@@ -18,10 +18,10 @@ npm run dev
 |---|---|
 | Modèles, textes, coloris | `src/data/products.json` |
 | Prix, exemplaires restants | `src/lib/products.ts` |
-| Avis clients (exemples) | `src/lib/reviews.ts` |
-| Mode aperçu (avis d'exemple, site non indexé) | `NEXT_PUBLIC_PREVIEW=false` pour le désactiver au lancement |
+| Avis clients (réels, par modèle) | `src/lib/reviews.ts` |
+| Mode aperçu (site non indexé) | `NEXT_PUBLIC_PREVIEW=false` pour le désactiver au lancement |
 | Nom, taille des séries, frais de port, plage de tour de tête | `src/lib/site.ts` |
-| Clubs partenaires | `src/app/clubs/page.tsx` (tableau `clubs`) |
+| Clubs partenaires | `src/lib/clubs.ts` |
 | Paiement | `STRIPE_SECRET_KEY` dans `.env.local` |
 | E-mail des demandes clubs | `NEXT_PUBLIC_CONTACT_EMAIL` |
 | Articles du journal | `src/lib/journal.ts` |
@@ -44,9 +44,10 @@ python scripts/render_caps.py /tmp/patches
 
 Le script Python nécessite `numpy` et `pillow`. Ces visuels sont à remplacer par les photos des casquettes produites.
 
-Crédits photo (licence Unsplash) : Fabio T. (trucker de base), Mediamodifier (photo d'ambiance).
+Crédit photo (licence Unsplash) : Fabio T. (trucker de base).
 
 ## Avant le lancement
 
-- Remplacer les avis d'exemple de `src/lib/reviews.ts` par des avis réels, puis définir `NEXT_PUBLIC_PREVIEW=false`.
+- Définir `NEXT_PUBLIC_PREVIEW=false`.
+- Ajouter les avis réels dans `src/lib/reviews.ts` au fur et à mesure.
 - Remplacer les visuels de présentation par les photos des casquettes produites.

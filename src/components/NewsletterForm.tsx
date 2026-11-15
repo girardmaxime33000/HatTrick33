@@ -22,7 +22,7 @@ export function NewsletterForm() {
   };
 
   if (state === "done") {
-    return <p className="newsletter-done">Votre inscription est enregistrée. Vous serez informé de la prochaine collection.</p>;
+    return <p className="newsletter-done">Inscription enregistrée.</p>;
   }
   return (
     <form className="newsletter-form" onSubmit={submit}>
@@ -35,7 +35,7 @@ export function NewsletterForm() {
       </button>
       {state === "error" && (
         <p className="error" role="alert">
-          L'inscription n'a pas pu être enregistrée. Merci de réessayer.
+          L'inscription n'a pas fonctionné. Réessayez.
         </p>
       )}
     </form>

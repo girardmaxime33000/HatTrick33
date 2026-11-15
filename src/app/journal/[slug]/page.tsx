@@ -34,7 +34,7 @@ export default async function ArticlePage({ params }: Props) {
       </div>
       {product && (
         <aside className="article-aside">
-          <p className="eyebrow">Le modèle associé</p>
+          <p className="muted small">La casquette</p>
           <ProductCard p={product} />
         </aside>
       )}

@@ -16,7 +16,6 @@ export default function CGV() {
 
   return (
     <article className="legal">
-      <p className="eyebrow">Informations légales</p>
       <h1>Conditions générales de vente</h1>
       <p className="muted small">Dernière mise à jour : {legal.updated}</p>
 

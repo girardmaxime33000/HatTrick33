@@ -13,13 +13,12 @@ export default function Merci() {
   return (
     <section className="section">
       <div className="empty">
-        <p className="eyebrow">Commande confirmée</p>
-        <h1>Merci pour votre commande</h1>
+        <h1>Commande confirmée</h1>
         <p className="muted">
-          Un e-mail de confirmation vient de vous être adressé. Votre casquette sera expédiée avec son numéro de série.
+          Vous allez recevoir un e-mail de confirmation. Le numéro de votre exemplaire est attribué à l'expédition.
         </p>
-        <Link href="/" className="btn">
-          Retour à l'accueil
+        <Link href="/collection" className="btn">
+          Retour à la collection
         </Link>
       </div>
     </section>

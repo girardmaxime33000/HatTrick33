@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CapPhoto } from "@/components/CapPhoto";
-import { StripeBadge } from "@/components/StripeBadge";
 import { useCart } from "@/components/CartProvider";
 import { getProduct, type Product } from "@/lib/products";
 import { euro, site } from "@/lib/site";
@@ -39,11 +38,8 @@ export default function Panier() {
       {!ready ? null : items.length === 0 ? (
         <div className="empty">
           <h2>Votre panier est vide</h2>
-          <p className="muted">
-            Les modèles de la {site.collection} sont disponibles dans la limite de {site.seriesSize} exemplaires chacun.
-          </p>
           <Link href="/collection" className="btn">
-            Découvrir la collection
+            Voir la collection
           </Link>
         </div>
       ) : (
@@ -58,7 +54,7 @@ export default function Panier() {
                   <h3>
                     <Link href={`/casquettes/${p.slug}`}>{p.name}</Link>
                   </h3>
-                  <p className="muted">{p.colorway} · 1 exemplaire numéroté</p>
+                  <p className="muted">{p.colorway}</p>
                   <button className="link" onClick={() => remove(p.slug)}>
                     Retirer
                   </button>
@@ -81,16 +77,16 @@ export default function Panier() {
               <span>{euro(subtotal + site.shippingCents)}</span>
             </p>
             <button className="btn" onClick={checkout} disabled={loading}>
-              {loading ? "Redirection en cours…" : "Procéder au paiement"}
+              {loading ? "Redirection…" : "Payer"}
             </button>
             {error && (
               <p className="error" role="alert">
                 {error}
               </p>
             )}
-            <StripeBadge />
             <p className="muted small">
-              En validant le paiement, vous acceptez les <Link href="/cgv">conditions générales de vente</Link>.
+              Paiement par carte sur la page sécurisée de Stripe. En payant, vous acceptez les{" "}
+              <Link href="/cgv">conditions générales de vente</Link>. <Link href="/retours">Retour sous 14 jours</Link>.
             </p>
           </aside>
         </div>
